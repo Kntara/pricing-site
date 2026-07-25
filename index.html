@@ -103,8 +103,9 @@ nav .links a:hover{color:var(--t1)}
 .rowlist b{font-weight:660}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:clamp(28px,5vw,64px);
   align-items:center}
-@media(max-width:900px){.hero{grid-template-columns:1fr}
-  .hero .shot{display:none}}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px}
+  .shot{justify-self:center}}
+.cap{margin-top:11px;font-size:12.5px;color:var(--t3);text-align:center;max-width:285px}
 .shot img{display:block;width:285px;height:auto;border-radius:30px;
   border:1px solid var(--bd2);box-shadow:var(--sh-lg)}
 .choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}

@@ -103,8 +103,9 @@ nav .links a:hover{color:var(--t1)}
 .rowlist b{font-weight:660}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:clamp(28px,5vw,64px);
   align-items:center}
-@media(max-width:900px){.hero{grid-template-columns:1fr}
-  .hero .shot{display:none}}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px}
+  .shot{justify-self:center}}
+.cap{margin-top:11px;font-size:12.5px;color:var(--t3);text-align:center;max-width:285px}
 .shot img{display:block;width:285px;height:auto;border-radius:30px;
   border:1px solid var(--bd2);box-shadow:var(--sh-lg)}
 .choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -227,12 +228,24 @@ footer{border-top:1px solid var(--bd);padding:36px 0 56px;color:var(--t3);font-s
 
 <section id="examples">
   <div class="wrap">
-    <div class="eyebrow">Who you could hire</div>
-    <h2 style="margin-top:12px;max-width:700px">She is whoever the job needs her to be.</h2>
-    <p class="lede" style="margin-top:15px;max-width:660px">
-      You write the job description, so the role is yours to define. These are the ones
-      people set up first.
-    </p>
+    <div class="hero" style="align-items:start">
+      <div>
+        <div class="eyebrow">Who you could hire</div>
+        <h2 style="margin-top:12px">She is whoever the job needs her to be.</h2>
+        <p class="lede" style="margin-top:15px">
+          You write the job description, so the role is yours to define. The app starts you
+          from a template &mdash; these are the ones people set up first.
+        </p>
+      </div>
+      <div class="shot">
+      <picture>
+        <source srcset="../img/app-hire-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="../img/app-hire-light.png" width="285" height="620" decoding="async" loading="lazy"
+             alt="The hire screen in the Kntara app, listing role templates to start from.">
+      </picture>
+      <p class="cap">Starting a hire in the app.</p>
+    </div>
+    </div>
     <div class="roles" style="margin-top:34px">
       <div class="role">
         <div class="rcat">Finance</div>
@@ -284,7 +297,7 @@ footer{border-top:1px solid var(--bd);padding:36px 0 56px;color:var(--t3);font-s
 
 <section id="how">
   <div class="wrap">
-    <div class="g2" style="gap:46px;align-items:start">
+    <div class="hero" style="align-items:start">
       <div>
         <div class="eyebrow">How it works</div>
         <h2 style="margin-top:12px">Three steps, then she&rsquo;s working.</h2>
@@ -292,16 +305,25 @@ footer{border-top:1px solid var(--bd);padding:36px 0 56px;color:var(--t3);font-s
           Setting her up takes about the time you&rsquo;d spend writing a job description &mdash;
           because that&rsquo;s roughly what you&rsquo;re doing.
         </p>
+        <div class="card" style="margin-top:24px">
+          <ul class="rowlist">
+            <li><span class="tick"></span><span><b>Hire her.</b> Pick the role she fills and how
+              experienced she needs to be. Give her a name.</span></li>
+            <li><span class="tick"></span><span><b>Brief her.</b> Set the rules she follows and
+              upload anything she should know. Change them whenever you like.</span></li>
+            <li><span class="tick"></span><span><b>Put her to work.</b> Add her to a conversation
+              and start handing things over. She tells you when she needs a decision.</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="card">
-        <ul class="rowlist">
-          <li><span class="tick"></span><span><b>Hire her.</b> Pick the role she fills and how
-            experienced she needs to be. Give her a name.</span></li>
-          <li><span class="tick"></span><span><b>Brief her.</b> Set the rules she follows and
-            upload anything she should know. Change them whenever you like.</span></li>
-          <li><span class="tick"></span><span><b>Put her to work.</b> Add her to a conversation
-            and start handing things over. She tells you when she needs a decision.</span></li>
-        </ul>
+      <div class="shot">
+        <picture>
+          <source srcset="../img/app-personality-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="../img/app-personality-light.png" width="285" height="620" decoding="async"
+               loading="lazy"
+               alt="Setting a new employee&rsquo;s personality, tone and reply length while hiring.">
+        </picture>
+        <p class="cap">Step one of five: her personality.</p>
       </div>
     </div>
   </div>
