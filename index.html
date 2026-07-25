@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Kntara gives you a virtual employee who owns the work end to end &mdash; not a chatbot you have to supervise.">
 <meta name="color-scheme" content="light dark">
-<title>Kntara</title>
+<title>Kntara &mdash; three ways to price a virtual employee</title>
 <style>:root{
   --brand:#2FB8B0; --brand-lite:#5BD5CF; --brand-deep:#167F77;
   --navy:#0B1933; --navy2:#122244;
@@ -101,6 +101,15 @@ nav .links a:hover{color:var(--t1)}
 .tick::after{content:"";position:absolute;left:5px;top:5px;width:6px;height:3px;
   border-left:2px solid var(--on-brand);border-bottom:2px solid var(--on-brand);transform:rotate(-45deg)}
 .rowlist b{font-weight:660}
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.choices{grid-template-columns:1fr}}
+.choice{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--bd);
+  border-radius:16px;padding:24px;box-shadow:var(--sh);text-decoration:none;color:inherit;
+  transition:transform .12s,box-shadow .12s,border-color .12s}
+.choice:hover{transform:translateY(-2px);box-shadow:var(--sh-lg);border-color:var(--brand)}
+.choice .cprice{margin-top:16px;font-family:var(--disp);font-weight:700;font-size:1.12rem;
+  color:var(--t1);font-variant-numeric:tabular-nums}
+.choice .cgo{margin-top:auto;padding-top:14px;font-size:13.5px;font-weight:700;color:var(--brand-deep)}
 .roles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 @media(max-width:1000px){.roles{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.roles{grid-template-columns:1fr}}
@@ -142,15 +151,50 @@ footer{border-top:1px solid var(--bd);padding:36px 0 56px;color:var(--t3);font-s
   .btn:hover{transform:none}}</style>
 </head>
 <body>
-<div style="min-height:100svh;display:flex;align-items:center;justify-content:center;
-     padding:28px;text-align:center">
-  <div>
+<section style="padding-top:clamp(44px,8vw,80px)">
+  <div class="wrap narrow" style="text-align:center">
     <span class="lockup" style="justify-content:center"><svg class="logo" viewBox="0 0 110 110" role="img" aria-label="Kntara"><circle cx="38" cy="65" r="7" fill="currentColor"/><circle cx="72" cy="65" r="7" fill="currentColor"/><path d="M28 38 Q38 28 55 22 Q72 28 82 38" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg>
       <span class="stack"><span class="wm">KNTARA</span>
       <span class="tl">Virtual employees</span></span></span>
-    <p class="lede" style="margin-top:26px">Hire someone who owns the work.</p>
-    <p class="fine" style="margin-top:10px">kntara.com</p>
+    <h1 style="margin-top:30px">Hire someone who owns the work.</h1>
+    <p class="lede" style="margin-top:18px">
+      A Kntara virtual employee isn&rsquo;t a chatbot you ask questions. She takes work off
+      your desk, chases the people it depends on, and comes back when it&rsquo;s done.
+    </p>
   </div>
-</div>
+  <div class="wrap" style="max-width:960px;margin-top:44px">
+    <div class="slab" style="text-align:center;padding:24px 26px">
+      <h3 style="color:#fff">We haven&rsquo;t settled how to price her yet.</h3>
+      <p style="margin-top:9px;font-size:14.8px">
+        Three options below. Each is a complete page &mdash; same product, same employee,
+        three different ways of paying for her. Read whichever you like, then tell us
+        which one you would actually buy, and what felt wrong about the others.
+      </p>
+    </div>
+    <div class="choices" style="margin-top:22px">
+      <a class="choice" href="hours/">
+        <h3>By the hour</h3>
+        <p class="fine" style="margin-top:8px">Pay only for hours she actually works. Idle hours cost nothing, and a more experienced employee costs more per hour.</p>
+        <div class="cprice">From $0.85 / hour</div>
+        <div class="cgo">Read this one <span aria-hidden="true">&rarr;</span></div>
+      </a>
+      <a class="choice" href="simple/">
+        <h3>One flat plan</h3>
+        <p class="fine" style="margin-top:8px">One price a month, everything included. Ask her one question or a thousand &mdash; the bill does not move.</p>
+        <div class="cprice">$149 / month</div>
+        <div class="cgo">Read this one <span aria-hidden="true">&rarr;</span></div>
+      </a>
+      <a class="choice" href="team/">
+        <h3>Like a real hire</h3>
+        <p class="fine" style="margin-top:8px">Choose how experienced she is, how many hours a day she works, and which days. A fixed monthly cost that matches the job.</p>
+        <div class="cprice">From $49 / month</div>
+        <div class="cgo">Read this one <span aria-hidden="true">&rarr;</span></div>
+      </a>
+    </div>
+    <p class="fine" style="margin-top:24px;text-align:center">
+      Prices are in US dollars and are real &mdash; these are the numbers we would charge.
+    </p>
+  </div>
+</section>
 </body>
 </html>
