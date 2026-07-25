@@ -89,6 +89,17 @@ nav .links a{white-space:nowrap}
 .lockup .wm,.lockup .tl{white-space:nowrap}
 @media(max-width:1020px){nav .links a.hide-md{display:none}}
 @media(max-width:700px){nav .links a.hide-sm{display:none}}
+@media(max-width:430px){
+  .lockup .tl{display:none}
+  .lockup{gap:8px} .lockup .logo{font-size:32px}
+  nav .links{gap:14px} nav .inner{gap:10px}
+}
+@media(max-width:360px){
+  .wrap{padding:0 15px}
+  nav .links{gap:10px}
+  nav .links a:not(.btn){display:none}
+  .btn.sm{padding:10px 14px;font-size:13.5px}
+}
 .btn{display:inline-flex;align-items:center;gap:9px;border:0;cursor:pointer;background:var(--brand);
   color:var(--on-brand);font-family:var(--body);font-weight:750;font-size:15.5px;padding:14px 26px;
   border-radius:11px;text-decoration:none;transition:filter .12s,transform .12s}
@@ -113,8 +124,7 @@ nav .links a{white-space:nowrap}
 .cap{margin-top:11px;font-size:12.5px;color:var(--t3);text-align:center;max-width:285px}
 .shot img{display:block;width:285px;height:auto;border-radius:30px;
   border:1px solid var(--bd2);box-shadow:var(--sh-lg)}
-.choices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media(max-width:1080px){.choices{grid-template-columns:1fr 1fr}}
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:820px){.choices{grid-template-columns:1fr}}
 .choice{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--bd);
   border-radius:16px;padding:24px;box-shadow:var(--sh);text-decoration:none;color:inherit;
@@ -186,17 +196,34 @@ details.reveal[open]{padding-bottom:8px}
   .btn:hover{transform:none}}</style>
 </head>
 <body>
-<section style="padding-top:clamp(44px,8vw,80px)">
-  <div class="wrap hero" style="max-width:960px">
+
+<nav><div class="wrap inner">
+  <a class="lockup" href="#top"><svg class="logo" viewBox="0 0 110 110" role="img" aria-label="Kntara"><circle cx="38" cy="65" r="7" fill="currentColor"/><circle cx="72" cy="65" r="7" fill="currentColor"/><path d="M28 38 Q38 28 55 22 Q72 28 82 38" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg><span class="stack"><span class="wm">KNTARA</span><span class="tl">Virtual Employees</span></span></a>
+  <div class="links">
+    <a class="hide-sm" href="#what">What she does</a>
+    <a class="hide-sm" href="#examples">Examples</a>
+    <a class="hide-sm hide-md" href="#models">Compare models</a>
+    <a class="hide-sm" href="#integrations">Integrations</a>
+    <a class="hide-sm hide-md" href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a class="btn sm" href="#pricing">Hire a VE</a>
+  </div>
+</div></nav>
+
+<section id="top">
+  <div class="wrap hero">
     <div>
-      <span class="lockup"><svg class="logo" viewBox="0 0 110 110" role="img" aria-label="Kntara"><circle cx="38" cy="65" r="7" fill="currentColor"/><circle cx="72" cy="65" r="7" fill="currentColor"/><path d="M28 38 Q38 28 55 22 Q72 28 82 38" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg>
-        <span class="stack"><span class="wm">KNTARA</span>
-        <span class="tl">Virtual employees</span></span></span>
-      <h1 style="margin-top:26px">Hire someone who owns the work.</h1>
-      <p class="lede" style="margin-top:18px">
+      <div class="eyebrow">Kntara Virtual Employees</div>
+      <h1 style="margin-top:14px">Hire someone who<br>actually does the work.</h1>
+      <p class="lede" style="margin-top:20px">
         A Kntara virtual employee isn&rsquo;t a chatbot you ask questions. She takes work off
-        your desk, chases the people it depends on, and comes back when it&rsquo;s done.
+        your desk and runs it to the end &mdash; chasing the people involved, keeping the
+        files, and telling you the moment something needs your decision.
       </p>
+      <div style="margin-top:30px;display:flex;gap:11px;flex-wrap:wrap">
+        <a class="btn" href="#pricing">See pricing &rarr;</a>
+        <a class="btn ghost" href="#what">What she can do</a>
+      </div>
     </div>
     <div class="shot">
       <picture>
@@ -206,58 +233,905 @@ details.reveal[open]{padding-bottom:8px}
       </picture>
     </div>
   </div>
-  <div class="wrap" style="max-width:960px;margin-top:44px">
+</section>
+
+<section id="what" style="background:var(--bg-elev)">
+  <div class="wrap">
+    <div class="eyebrow">What she does</div>
+    <h2 style="margin-top:12px;max-width:660px">What makes her an employee, not a tool.</h2>
+    <div class="g4" style="margin-top:34px">
+      <div class="card">
+        <h3>She works in your conversations</h3>
+        <p class="fine" style="margin-top:9px">Talk to her in a thread with your team. Say
+          &ldquo;get this approved by Thursday&rdquo; and the task exists &mdash; you don&rsquo;t fill in a form.</p>
+      </div>
+      <div class="card">
+        <h3>She finishes things</h3>
+        <p class="fine" style="margin-top:9px">Reconciling a statement, assembling a deck,
+          collecting documents. She works through the steps and comes back with the result.</p>
+      </div>
+      <div class="card">
+        <h3>She chases people</h3>
+        <p class="fine" style="margin-top:9px">Your team, your accountant, a supplier who
+          isn&rsquo;t a Kntara user. She emails, reminds, and reports who still hasn&rsquo;t replied.</p>
+      </div>
+      <div class="card">
+        <h3>She knows your business</h3>
+        <p class="fine" style="margin-top:9px">Give her your policies and files once. She
+          answers from them &mdash; the travel policy, the approval limits, last quarter&rsquo;s numbers.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="g2" style="gap:22px;align-items:start">
+        <div>
+          <div class="rcat">Her own dashboard</div>
+          <h3 style="margin-top:6px">Every employee gets a page, and you decide what is on it.</h3>
+          <p class="fine" style="margin-top:9px">Each virtual employee has her own dashboard.
+            Choose what she keeps in front of you &mdash; what she is working on right now, what
+            she is waiting on somebody else for, and the handful of numbers that matter for her
+            job. Arrange it once and it stays that way.</p>
+        </div>
+        <ul class="rowlist">
+          <li><span class="tick"></span><span><b>Different per employee.</b> Your CFO&rsquo;s page
+            and your recruiter&rsquo;s page have nothing in common, and neither should.</span></li>
+          <li><span class="tick"></span><span><b>Built from her actual work.</b> Everything on it
+            is something she did or is waiting on &mdash; not a report you have to ask for.</span></li>
+          <li><span class="tick"></span><span><b>Rearrange it whenever.</b> Add what you find
+            yourself asking her for, drop what you stopped reading.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="outside" class="band">
+  <div class="wrap">
+    <div class="g2" style="gap:clamp(28px,5vw,56px);align-items:start">
+      <div>
+        <div class="eyebrow" style="color:var(--brand-lite)">People outside your company</div>
+        <h2 style="margin-top:12px">Most of the work isn&rsquo;t finished inside your company.</h2>
+        <p style="margin-top:15px;font-size:1.06rem;line-height:1.6">
+          The supplier, the accountant, the candidate, the client who owes you a signature &mdash;
+          she deals with all of them directly, and none of them ever hears the word Kntara or
+          signs up for anything.
+        </p>
+        <p style="margin-top:14px;font-size:1.06rem;line-height:1.6">
+          This is the part that usually falls back on you. It doesn&rsquo;t here.
+        </p>
+      </div>
+      <ul class="rowlist" style="gap:15px">
+        <li><span class="tick"></span><span><b>No account, ever.</b> She emails them a private
+          link to the one task they are part of. They reply, upload a file or approve something
+          in the browser and that is the whole experience.</span></li>
+        <li><span class="tick"></span><span><b>They see the task, not the thread.</b> Nothing
+          else from your organisation is visible to them &mdash; not the conversation it came
+          from, not who else is on it.</span></li>
+        <li><span class="tick"></span><span><b>She chases on their schedule.</b> Reminders go out
+          on their working hours, not hers, and she keeps going until they answer or you tell
+          her to stop.</span></li>
+        <li><span class="tick"></span><span><b>You see who is holding things up.</b> Every reply,
+          file and approval lands back in the task, with who sent it and when &mdash; and who
+          still hasn&rsquo;t.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="examples">
+  <div class="wrap">
+    <div class="hero" style="align-items:start">
+      <div>
+        <div class="eyebrow">Who you could hire</div>
+        <h2 style="margin-top:12px">She is whoever the job needs her to be.</h2>
+        <p class="lede" style="margin-top:15px">
+          You write the job description, so the role is yours to define. Six of these start
+          from a template in the app today; the rest are jobs people wrote themselves, and
+          the list keeps growing.
+        </p>
+      </div>
+      <div class="shot">
+      <picture>
+        <source srcset="img/app-hire-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="img/app-hire-light.png" width="285" height="620" decoding="async" loading="lazy"
+             alt="The hire screen in the Kntara app, listing role templates to start from.">
+      </picture>
+      <p class="cap">Starting a hire in the app.</p>
+    </div>
+    </div>
+    <div class="roles" style="margin-top:34px">
+      <div class="role">
+        <div class="rcat">Technology <span style="color:var(--t3)">&middot; in the app</span></div>
+        <h3>CTO</h3>
+        <p class="fine" style="margin-top:8px">Reviews what was shipped this week, writes the spec for what&rsquo;s next, and tells you plainly when a vendor&rsquo;s quote does not add up.</p>
+        <ul class="tasks"><li>Sanity-check a vendor quote</li><li>Write the spec</li><li>Weekly release note</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Finance <span style="color:var(--t3)">&middot; in the app</span></div>
+        <h3>CFO</h3>
+        <p class="fine" style="margin-top:8px">Watches the runway, builds the board pack from the real numbers, and tells you in March that November is going to be tight.</p>
+        <ul class="tasks"><li>Cash-flow forecast</li><li>Budget vs actual</li><li>Board pack numbers</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Finance</div>
+        <h3>Accountant</h3>
+        <p class="fine" style="margin-top:8px">Matches the month&rsquo;s receipts against the card statement, flags the three with no match, and emails the people who owe you one.</p>
+        <ul class="tasks"><li>Reconcile the statement</li><li>Chase missing receipts</li><li>Prep the VAT return</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">People <span style="color:var(--t3)">&middot; in the app</span></div>
+        <h3>Head of People</h3>
+        <p class="fine" style="margin-top:8px">Screens sixty applicants against your criteria, shortlists eight, and chases each one for references until they land.</p>
+        <ul class="tasks"><li>Screen applicants</li><li>Book the interviews</li><li>Chase references</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Support <span style="color:var(--t3)">&middot; in the app</span></div>
+        <h3>Executive assistant</h3>
+        <p class="fine" style="margin-top:8px">Turns &ldquo;sort out the Riyadh trip&rdquo; into flights, a hotel, a briefing pack and a calendar that doesn&rsquo;t clash.</p>
+        <ul class="tasks"><li>Book a trip end to end</li><li>Guard the calendar</li><li>Prep the briefing pack</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Front desk</div>
+        <h3>Receptionist</h3>
+        <p class="fine" style="margin-top:8px">Acknowledges every incoming request within the minute, works out who it belongs to, and books the meeting before you&rsquo;ve opened your laptop.</p>
+        <ul class="tasks"><li>Triage the inbox</li><li>Route the request</li><li>Book the meeting</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Research <span style="color:var(--t3)">&middot; in the app</span></div>
+        <h3>Researcher</h3>
+        <p class="fine" style="margin-top:8px">Reads the twelve tabs you never opened and comes back with a one-page answer, with the source under every claim.</p>
+        <ul class="tasks"><li>Compare five suppliers</li><li>Summarise a report</li><li>Fact-check a claim</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Marketing <span style="color:var(--t3)">&middot; in the app</span></div>
+        <h3>Marketing lead</h3>
+        <p class="fine" style="margin-top:8px">Turns one launch into a month of posts, a page brief and an email, then reports which of them anybody actually read.</p>
+        <ul class="tasks"><li>Draft the launch email</li><li>Plan a month of posts</li><li>Report what landed</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Technical</div>
+        <h3>Engineer</h3>
+        <p class="fine" style="margin-top:8px">Reviews drawings against the specification, lists every discrepancy, and tracks each query until someone answers it.</p>
+        <ul class="tasks"><li>Check drawings vs spec</li><li>Log the discrepancies</li><li>Track open queries</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Supply</div>
+        <h3>Procurement officer</h3>
+        <p class="fine" style="margin-top:8px">Gets three quotes for identical scope, lines them up side by side, and holds each vendor to the date they promised.</p>
+        <ul class="tasks"><li>Collect three quotes</li><li>Compare like for like</li><li>Chase delivery dates</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Wellness</div>
+        <h3>Nutritionist</h3>
+        <p class="fine" style="margin-top:8px">Builds the week&rsquo;s meals around what you&rsquo;ll actually eat, logs what you had, and adjusts the plan on Sunday.</p>
+        <ul class="tasks"><li>Plan the week&rsquo;s meals</li><li>Build the shopping list</li><li>Log what you ate</li></ul>
+      </div>
+      <div class="role">
+        <div class="rcat">Wellness</div>
+        <h3>Fitness coach</h3>
+        <p class="fine" style="margin-top:8px">Writes the programme, tracks every session, and rewrites next week based on what you actually managed this week.</p>
+        <ul class="tasks"><li>Write the programme</li><li>Track every session</li><li>Rewrite next week</li></ul>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:20px;max-width:70ch">
+      Not on the list? Describe the job in your own words and she takes it &mdash; the same
+      way you&rsquo;d brief a new hire on their first morning. New templates land regularly,
+      so the shortlist in the app grows without you doing anything.
+    </p>
+  </div>
+</section>
+
+<section id="integrations" style="background:var(--bg-elev)">
+  <div class="wrap">
+    <span style="display:inline-block;font-size:10.5px;font-weight:760;letter-spacing:.13em;text-transform:uppercase;background:var(--brand);color:var(--on-brand);padding:5px 11px;border-radius:999px">Coming soon</span>
+    <h2 style="margin-top:14px;max-width:680px">Next, she plugs into the tools the work already lives in.</h2>
+    <p class="lede" style="margin-top:15px;max-width:680px">
+      Today she works from what you give her and from email. We are connecting her to the rest,
+      so she reads the thread, books the room and updates the record without being asked twice.
+    </p>
+    <div class="g4" style="margin-top:32px">
+      <div class="card">
+        <div class="rcat">Email and calendar</div>
+        <h3 style="margin-top:6px">Her inbox and yours</h3>
+        <p class="fine" style="margin-top:8px">She follows the thread it started in, and books the time without a round of emails about time.</p>
+        <ul class="tasks"><li>Gmail</li><li>Outlook</li><li>Google Calendar</li><li>Exchange</li></ul>
+      </div>
+      <div class="card">
+        <div class="rcat">Files and storage</div>
+        <h3 style="margin-top:6px">Where the documents are</h3>
+        <p class="fine" style="margin-top:8px">She reads from the folder you already keep, and files what she produces back into it.</p>
+        <ul class="tasks"><li>Google Drive</li><li>SharePoint</li><li>Dropbox</li><li>Box</li></ul>
+      </div>
+      <div class="card">
+        <div class="rcat">Business tools</div>
+        <h3 style="margin-top:6px">Your customers and tickets</h3>
+        <p class="fine" style="margin-top:8px">She updates the record when something changes, instead of telling you to update it.</p>
+        <ul class="tasks"><li>HubSpot</li><li>Salesforce</li><li>Intercom</li><li>Zendesk</li><li>Slack</li><li>Jira</li></ul>
+      </div>
+      <div class="card">
+        <div class="rcat">Reporting and BI</div>
+        <h3 style="margin-top:6px">The numbers you report on</h3>
+        <p class="fine" style="margin-top:8px">She pulls the figures from the source you trust, so her summary and your dashboard agree.</p>
+        <ul class="tasks"><li>Power BI</li><li>Tableau</li><li>Looker</li><li>Metabase</li><li>Google Sheets</li></ul>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:20px;max-width:74ch">
+      None of these are live yet, and we would rather build the ones you would actually switch
+      on. Tell us which tool your work runs through and it moves up the list.
+    </p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="hero" style="align-items:start">
+      <div>
+        <div class="eyebrow">How it works</div>
+        <h2 style="margin-top:12px">Three steps, then she&rsquo;s working.</h2>
+        <p class="lede" style="margin-top:16px">
+          Setting her up takes about the time you&rsquo;d spend writing a job description &mdash;
+          because that&rsquo;s roughly what you&rsquo;re doing.
+        </p>
+        <div class="card" style="margin-top:24px">
+          <ul class="rowlist">
+            <li><span class="tick"></span><span><b>Hire her.</b> Pick the role she fills and how
+              experienced she needs to be. Give her a name.</span></li>
+            <li><span class="tick"></span><span><b>Brief her.</b> Set the rules she follows and
+              upload anything she should know. Change them whenever you like.</span></li>
+            <li><span class="tick"></span><span><b>Put her to work.</b> Add her to a conversation
+              and start handing things over. She tells you when she needs a decision.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="shot">
+        <picture>
+          <source srcset="img/app-personality-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="img/app-personality-light.png" width="285" height="620" decoding="async"
+               loading="lazy"
+               alt="Setting a new employee&rsquo;s personality, tone and reply length while hiring.">
+        </picture>
+        <p class="cap">Step one of five: her personality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="models">
+  <div class="wrap">
     <div class="slab" style="text-align:center;padding:24px 26px">
       <h3 style="color:#fff">We haven&rsquo;t settled how to price her yet.</h3>
       <p style="margin-top:9px;font-size:14.8px">
-        Four options below, in a random order &mdash; none of them is our recommendation. Each is a complete page &mdash; same product, same employee,
-        four different ways of paying for her. Read whichever you like, then tell us
-        which one you would actually buy, and what felt wrong about the others.
+        Four ways of paying for the same employee. One is picked for you at random
+        to start &mdash; switch between them, then tell us which one you would
+        actually buy, and what felt wrong about the others.
       </p>
     </div>
-    <div class="choices" id="choices" style="margin-top:22px">
-      <a class="choice" href="hours/">
-        <h3>By the hour</h3>
-        <p class="fine" style="margin-top:8px">Pay only for hours she actually works. Idle hours cost nothing, and a more experienced employee costs more per hour.</p>
-        <div class="cprice">From $0.85 / hour</div>
-        <div class="cgo">Read this one <span aria-hidden="true">&rarr;</span></div>
-      </a>
-      <a class="choice" href="simple/">
-        <h3>One flat plan</h3>
-        <p class="fine" style="margin-top:8px">One price a month, everything included. Ask her one question or a thousand &mdash; the bill does not move.</p>
-        <div class="cprice">$149 / month</div>
-        <div class="cgo">Read this one <span aria-hidden="true">&rarr;</span></div>
-      </a>
-      <a class="choice" href="team/">
-        <h3>Like a real hire</h3>
-        <p class="fine" style="margin-top:8px">Choose how experienced she is, how many hours a day she works, and which days. A fixed monthly cost that matches the job.</p>
-        <div class="cprice">From $49 / month</div>
-        <div class="cgo">Read this one <span aria-hidden="true">&rarr;</span></div>
-      </a>
-      <a class="choice" href="crew/">
-        <h3>A senior and her team</h3>
-        <p class="fine" style="margin-top:8px">Same as a real hire, except from Senior up she arrives with juniors of her own and hands them the routine work.</p>
-        <div class="cprice">From $49 / month</div>
-        <div class="cgo">Read this one <span aria-hidden="true">&rarr;</span></div>
-      </a>
+    <div class="fieldlab" style="margin-top:28px">Choose a pricing model</div>
+    <div class="seg mseg" id="segModel" role="group" aria-label="Pricing model"><button type="button" data-m="hours" aria-pressed="false">By the hour<small>Pay for hours she works</small></button><button type="button" data-m="simple" aria-pressed="false">One flat plan<small>One price, everything in</small></button><button type="button" data-m="team" aria-pressed="false">Like a real hire<small>Experience, hours, days</small></button><button type="button" data-m="crew" aria-pressed="false">A senior and her team<small>She delegates the routine</small></button></div>
+    <div class="cmprow">
+      <span class="fine cmphead">The same job on each, so the numbers compare:
+        a full-time senior, five days a week. The flat plan has no experience
+        levels, so its closest equivalent is the tier sized for all-day use.</span>
+      <span class="cmp" data-m="hours"><b>By the hour</b><span class="num">about $204</span><span class="fine">110 worked hours at $1.85</span></span><span class="cmp" data-m="simple"><b>One flat plan</b><span class="num">$149</span><span class="fine">Team plan, sized for all-day use</span></span><span class="cmp" data-m="team"><b>Like a real hire</b><span class="num">$149</span><span class="fine">Senior, 8h, 5 days</span></span><span class="cmp" data-m="crew"><b>A senior and her team</b><span class="num">$149</span><span class="fine">Senior, 8h, 5 days, plus 2 juniors</span></span>
     </div>
-    <p class="fine" style="margin-top:24px;text-align:center">
-      Prices are in US dollars and are real &mdash; these are the numbers we would charge.
-    </p>
   </div>
-</section><script>
+</section>
+<div class="pmodel" id="panel-hours" role="region" aria-label="By the hour pricing"><section id="hours-pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 style="margin-top:12px;max-width:640px">Pay for the hours she works. Nothing else.</h2>
+    <p class="lede" style="margin-top:16px;max-width:640px">
+      No plan, no subscription, no per-person fee. Your wallet is charged only for the hours
+      in which she actually did something &mdash; idle hours are free. A more experienced
+      employee costs more per hour, exactly as she would if you contracted one.
+    </p>
+
+    <div class="g2" style="margin-top:32px;gap:22px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div>
+          <div class="fieldlab">Experience</div>
+          <div class="seg" id="hours-segSen" role="group" aria-label="Experience">
+            <button type="button" data-k="jr" aria-pressed="false">Junior<small>$0.85 / hr &middot; 1 task at a time</small></button>
+            <button type="button" data-k="as" aria-pressed="false">Associate<small>$1.35 / hr &middot; 2 at a time</small></button>
+            <button type="button" data-k="sr" aria-pressed="true">Senior<small>$1.85 / hr &middot; 4 at a time</small></button>
+            <button type="button" data-k="pr" aria-pressed="false">Principal<small>$4.65 / hr &middot; 8 + leads juniors</small></button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Prepay and we add credit</h3>
+          <div class="scroll-x" style="margin-top:14px">
+            <div class="tw"><table class="num">
+              <thead><tr><th>You add</th><th>Bonus</th><th>Wallet credit</th></tr></thead>
+              <tbody>
+                <tr><td>$250</td><td>&mdash;</td><td>$250</td></tr>
+                <tr><td>$1,250</td><td>+10%</td><td>$1,375</td></tr>
+                <tr><td>$3,000</td><td>+20%</td><td>$3,600</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <p class="fine" style="margin-top:13px">Credit never expires, and it works with any
+            experience level &mdash; mix a junior and a principal from the same balance.</p>
+        </div>
+        <div class="pbar" aria-hidden="true">
+          <span class="pl">Your estimate<br><b id="hours-pbLab">Senior &middot; 110 hours</b></span>
+          <span class="pv num" id="hours-pbVal">$204</span>
+        </div>
+      </div>
+
+      <div class="slab out">
+        <div id="hours-oRole" style="font-size:12px;font-weight:760;letter-spacing:.13em;
+          text-transform:uppercase;color:var(--brand-lite)">Senior</div>
+        <div style="display:flex;align-items:baseline;gap:11px;margin-top:13px">
+          <span class="num" id="hours-oRate" style="font-family:var(--disp);font-weight:700;
+            font-size:clamp(2.7rem,6.6vw,3.9rem);line-height:.95;letter-spacing:-.04em;
+            color:#fff">$1.85</span>
+          <span style="font-size:15px;color:var(--on-slab-2);max-width:110px;line-height:1.35">
+            per working<br>hour</span>
+        </div>
+        <div style="margin-top:26px">
+          <div class="fieldlab" style="color:var(--on-slab-2)">Estimate your month</div>
+          <input id="hours-hrs" type="range" min="20" max="320" step="5" value="110"
+            style="width:100%;accent-color:var(--brand);height:26px;cursor:pointer"
+            aria-label="Working hours per month">
+          <div style="display:flex;align-items:baseline;gap:11px;margin-top:4px" aria-live="polite">
+            <span class="num" id="hours-mo" style="font-family:var(--disp);font-weight:700;
+              font-size:2.4rem;letter-spacing:-.03em;color:#fff">$204</span>
+            <span style="font-size:14px;color:var(--on-slab-2)">at <span class="num" id="hours-hv">110</span> hours</span>
+          </div>
+          <div style="display:flex;gap:7px;margin-top:15px;flex-wrap:wrap" id="hours-presets">
+            <button type="button" data-h="40" class="pbtn">Occasional &middot; 40h</button>
+            <button type="button" data-h="110" class="pbtn">Typical &middot; 110h</button>
+            <button type="button" data-h="300" class="pbtn">Heavy &middot; 300h</button>
+          </div>
+        </div>
+        <dl style="margin-top:22px;border-top:1px solid rgba(255,255,255,.14);padding-top:17px;
+          display:flex;flex-direction:column;gap:11px">
+          <div class="sr"><dt>Handles at once</dt><dd id="hours-oConc">4 tasks</dd></div>
+          <div class="sr"><dt>Teammates</dt><dd>Unlimited</dd></div>
+          <div class="sr"><dt>Outside contacts</dt><dd>Unlimited</dd></div>
+          <div class="sr"><dt>Minimum</dt><dd>None</dd></div>
+        </dl>
+        <a class="btn" href="mailto:support@kntara.com?subject=Hire%20a%20virtual%20employee" style="width:100%;justify-content:center;margin-top:22px">
+          Top up and hire &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:22px;border-color:var(--bd2)">
+      <h4>The honest version</h4>
+      <p class="fine" style="margin-top:8px;max-width:80ch">A quiet month is genuinely cheap
+        &mdash; you might spend $40. A month where your team leans on her all day is a much
+        bigger number, because she worked all day. Paying by the hour also costs roughly a
+        third more than hiring her on a salary, which is what you&rsquo;re trading for having
+        no commitment at all. If a predictable line on your budget matters more, say so and
+        we&rsquo;ll put you on the right footing.</p>
+    </div>
+  </div>
+</section>
+
+<script>
 (function(){
-  var box=document.getElementById('choices'); if(!box) return;
-  var kids=[].slice.call(box.children), key='kntara-choice-order', order=null;
-  try{ order=JSON.parse(sessionStorage.getItem(key)); }catch(e){}
-  if(!(order&&order.length===kids.length)){
-    order=kids.map(function(_,i){return i});
-    for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=order[i];order[i]=order[j];order[j]=t}
-    try{ sessionStorage.setItem(key,JSON.stringify(order)); }catch(e){}
+  var R={jr:{n:"Junior",r:0.85,c:1},as:{n:"Associate",r:1.35,c:2},sr:{n:"Senior",r:1.85,c:4},pr:{n:"Principal",r:4.65,c:8}}, sen="sr";
+  var slider=document.getElementById('hours-hrs');
+  function $(i){return document.getElementById(i)}
+  function f(n){return n.toLocaleString('en-US')}
+  function draw(){
+    var s=R[sen], h=+slider.value;
+    $('hours-oRole').textContent=s.n;
+    $('hours-oRate').textContent='$'+s.r.toFixed(2);
+    $('hours-oConc').textContent=s.c===1?'1 task':s.c+' tasks';
+    $('hours-hv').textContent=f(h);
+    $('hours-mo').textContent='$'+f(Math.round(h*s.r));
+    $('hours-pbLab').textContent=s.n+' \u00b7 '+f(h)+' hours';
+    $('hours-pbVal').textContent=$('hours-mo').textContent;
   }
-  order.forEach(function(i){ box.appendChild(kids[i]) });
+  slider.addEventListener('input',draw);
+  $('hours-presets').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return; slider.value=b.dataset.h; draw();});
+  var w=$('hours-segSen');
+  w.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    w.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); sen=b.dataset.k; draw();});
+  draw();
 })();
 </script>
+
+</div><div class="pmodel" id="panel-simple" role="region" aria-label="One flat plan pricing"><section id="simple-pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 style="margin-top:12px;max-width:620px">One price a month. No meter running.</h2>
+    <p class="lede" style="margin-top:16px;max-width:620px">
+      Pick a plan and stop counting. Ask her a second question or a hundredth &mdash; at midnight,
+      on a Friday &mdash; and the bill doesn&rsquo;t move.
+    </p>
+
+    <div style="margin-top:26px;display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+      <div class="seg" id="simple-segCycle" role="group" aria-label="Billing period" style="max-width:390px">
+        <button type="button" data-k="m" aria-pressed="true">Monthly</button>
+        <button type="button" data-k="y" aria-pressed="false">Yearly<small>2 months free</small></button>
+      </div>
+      <span class="fine" id="simple-cycNote">Billed monthly from your wallet.</span>
+    </div>
+
+    <div class="tiers" style="margin-top:22px">
+      <div class="tier">
+        <span class="tspace"></span>
+        <div class="tname">Starter</div>
+        <div class="tprice"><span class="amt num" data-m="59" data-y="49" data-yt="590">$59</span><span class="per">/ month</span></div>
+        <p class="tsub">For one person with a steady trickle of work.</p>
+        <ul class="rowlist">
+          <li><span class="tick"></span><span><b>30 tasks</b> a month</span></li>
+          <li><span class="tick"></span><span><b>200 messages</b> in chat</span></li>
+          <li><span class="tick"></span><span><b>Unlimited teammates</b> &mdash; no per-seat fee</span></li>
+          <li><span class="tick"></span><span>10 outside contacts she can chase</span></li>
+          <li><span class="tick"></span><span>Works overnight at no extra charge</span></li>
+        </ul>
+        <a class="btn ghost" href="mailto:support@kntara.com?subject=Hire%20a%20virtual%20employee"
+           style="width:100%;justify-content:center;margin-top:22px">Choose Starter</a>
+      </div>
+      <div class="tier hero">
+        <span class="tbadge">Most teams start here</span>
+        <div class="tname">Team</div>
+        <div class="tprice"><span class="amt num" data-m="149" data-y="124" data-yt="1490">$149</span><span class="per">/ month</span></div>
+        <p class="tsub">For a small team leaning on her all day.</p>
+        <ul class="rowlist">
+          <li><span class="tick"></span><span><b>120 tasks</b> a month</span></li>
+          <li><span class="tick"></span><span><b>800 messages</b> in chat</span></li>
+          <li><span class="tick"></span><span><b>Unlimited teammates</b> &mdash; no per-seat fee</span></li>
+          <li><span class="tick"></span><span>40 outside contacts she can chase</span></li>
+          <li><span class="tick"></span><span>Works overnight at no extra charge</span></li>
+        </ul>
+        <a class="btn" href="mailto:support@kntara.com?subject=Hire%20a%20virtual%20employee"
+           style="width:100%;justify-content:center;margin-top:22px">Choose Team</a>
+      </div>
+      <div class="tier">
+        <span class="tspace"></span>
+        <div class="tname">Business</div>
+        <div class="tprice"><span class="amt num" data-m="509" data-y="424" data-yt="5090">$509</span><span class="per">/ month</span></div>
+        <p class="tsub">For a department running several functions.</p>
+        <ul class="rowlist">
+          <li><span class="tick"></span><span><b>450 tasks</b> a month</span></li>
+          <li><span class="tick"></span><span><b>3,000 messages</b> in chat</span></li>
+          <li><span class="tick"></span><span><b>Unlimited teammates</b> &mdash; no per-seat fee</span></li>
+          <li><span class="tick"></span><span>150 outside contacts she can chase</span></li>
+          <li><span class="tick"></span><span>Works overnight at no extra charge</span></li>
+        </ul>
+        <a class="btn ghost" href="mailto:support@kntara.com?subject=Hire%20a%20virtual%20employee"
+           style="width:100%;justify-content:center;margin-top:22px">Choose Business</a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:20px;max-width:76ch">
+      Need more in a given month? Extra tasks are <b>$1.20</b> each &mdash; no plan change,
+      no upsell call. Five chat messages count as one task. Move plans up or down any time,
+      prorated the same day.
+    </p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var w=document.getElementById('simple-segCycle'), note=document.getElementById('simple-cycNote');
+  function f(n){return (+n).toLocaleString('en-US')}
+  w.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    w.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true');
+    var yearly=b.dataset.k==='y';
+    document.querySelectorAll('.amt').forEach(function(el){
+      el.textContent='$'+f(yearly?el.dataset.y:el.dataset.m);
+    });
+    note.textContent = yearly
+      ? 'Per month, billed yearly \u2014 you pay for 10 months, not 12.'
+      : 'Billed monthly from your wallet.';
+  });
+})();
+</script>
+
+</div><div class="pmodel" id="panel-team" role="region" aria-label="Like a real hire pricing"><section id="team-pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 style="margin-top:12px;max-width:640px">Hire her the way you&rsquo;d hire anyone.</h2>
+    <p class="lede" style="margin-top:16px;max-width:640px">
+      Choose how experienced she is, how many hours a day she works, and which days.
+      One flat salary &mdash; no meter, nothing to expire. From $49 a month.
+    </p>
+
+    <div class="formula" style="margin-top:26px">
+      <span>Experience</span><b>&times;</b><span>Hours a day</span><b>&times;</b><span>Days a week</span>
+      <b>=</b><em>her salary, flat every month</em>
+    </div>
+    <div class="pick" style="margin-top:32px">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div><div class="fieldlab">Experience</div>
+          <div class="seg" id="team-segSen" role="group" aria-label="Experience">
+            <button type="button" data-k="jr" aria-pressed="false">Junior<small>1 task at a time</small></button>
+            <button type="button" data-k="as" aria-pressed="false">Associate<small>2 at a time</small></button>
+            <button type="button" data-k="sr" aria-pressed="true">Senior<small>4 at a time</small></button>
+            <button type="button" data-k="pr" aria-pressed="false">Principal<small>8 + leads juniors</small></button>
+          </div></div>
+        <div><div class="fieldlab">Hours per day</div>
+          <div class="seg" id="team-segHrs" role="group" aria-label="Hours per day">
+            <button type="button" data-k="h4" aria-pressed="false">4h<small>part-time</small></button>
+            <button type="button" data-k="h8" aria-pressed="true">8h<small>full-time</small></button>
+            <button type="button" data-k="h16" aria-pressed="false">16h<small>two shifts</small></button>
+            <button type="button" data-k="h24" aria-pressed="false">24h<small>always on</small></button>
+          </div></div>
+        <div><div class="fieldlab">Days per week</div>
+          <div class="seg" id="team-segDay" role="group" aria-label="Days per week">
+            <button type="button" data-k="d5" aria-pressed="true">5 days<small>you choose which</small></button>
+            <button type="button" data-k="d7" aria-pressed="false">7 days<small>every day</small></button>
+          </div></div>
+        <div><div class="fieldlab">Billing</div>
+          <div class="seg" id="team-segCyc" role="group" aria-label="Billing" style="max-width:390px">
+            <button type="button" data-k="m" aria-pressed="true">Monthly</button>
+            <button type="button" data-k="y" aria-pressed="false">Yearly<small>2 months free</small></button>
+          </div></div>
+        <p class="fine">She works the days and hours you choose &mdash; pick whichever five days suit
+          your week. Anything that arrives outside them is
+          received straight away and picked up when her shift starts &mdash; nothing is lost.</p>
+        <div class="pbar" aria-hidden="true">
+          <span class="pl">Her salary<br><b id="team-pbLab">Senior &middot; 8h &middot; 5 days</b></span>
+          <span class="pv num" id="team-pbVal">$149</span>
+        </div>
+      </div>
+
+      <div class="slab out">
+        <div id="team-oRole" style="font-size:12px;font-weight:760;letter-spacing:.13em;
+          text-transform:uppercase;color:var(--brand-lite)">Senior</div>
+        <div style="display:flex;align-items:baseline;gap:9px;margin-top:13px">
+          <b class="num" id="team-oPrice" style="font-family:var(--disp);font-weight:700;font-size:3rem;
+            letter-spacing:-.04em;line-height:1;color:#fff">$149</b>
+          <span id="team-oPer" style="font-size:14.5px;color:var(--on-slab-2)">/ month</span>
+        </div>
+        <div class="num" id="team-oDaily" style="font-size:14px;color:var(--brand-lite);margin-top:8px;
+          font-weight:620">about $5 a day</div>
+        <div id="team-oYear" class="num" style="font-size:13px;color:var(--on-slab-2);margin-top:6px"></div>
+        <dl style="margin-top:20px;border-top:1px solid rgba(255,255,255,.14);padding-top:17px;
+          display:flex;flex-direction:column;gap:11px">
+          <div class="sr"><dt>Works</dt><dd id="team-oHrs">8 hours a day</dd></div>
+          <div class="sr"><dt>Days</dt><dd id="team-oDays">5 days you choose</dd></div>
+          <div class="sr"><dt>Handles at once</dt><dd id="team-oConc">4 tasks</dd></div>
+          <div class="sr"><dt>Monthly capacity</dt><dd id="team-oCap">~130 tasks</dd></div>
+          <div class="sr"><dt>Beyond that</dt><dd id="team-oOver">$1.00 / task</dd></div>
+          <div class="sr"><dt>Teammates</dt><dd>Unlimited</dd></div>
+        </dl>
+        <a class="btn" href="mailto:support@kntara.com?subject=Hire%20a%20virtual%20employee" style="width:100%;justify-content:center;margin-top:22px">Hire this VE &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-elev)">
+  <div class="wrap">
+    <div class="eyebrow">What experience buys</div>
+    <h2 style="margin-top:12px;max-width:700px">More experience means she handles more at once
+      &mdash; and needs less from you.</h2>
+    <div class="g4" style="margin-top:32px">
+      <div class="card"><h3>Junior</h3><p class="fine" style="margin-top:8px">One thing at a time,
+        done carefully. Repetitive, well-defined work: logging, sorting, first-line replies.</p></div>
+      <div class="card"><h3>Associate</h3><p class="fine" style="margin-top:8px">Two at a time and
+        handles some ambiguity. Drafts, follow-ups, routine coordination without hand-holding.</p></div>
+      <div class="card"><h3>Senior</h3><p class="fine" style="margin-top:8px">Four in parallel,
+        thinks a job through before starting, checks her own work. Multi-step tasks end to end.</p></div>
+      <div class="card"><h3>Principal</h3><p class="fine" style="margin-top:8px">Eight in parallel,
+        and hands the routine parts to your junior VEs. Work spanning people and deadlines.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Every combination</div>
+    <h2 style="margin-top:12px">If you would rather see the whole table</h2>
+    <details class="reveal" style="margin-top:22px">
+      <summary>Every experience level and shift, monthly, on a 5-day week</summary>
+      <div class="scroll-x" style="margin-top:8px"><div class="tw"><table class="mtx num">
+        <thead><tr><th>&nbsp;</th><th>4h / day</th><th>8h / day</th><th>16h / day</th><th>24h / day</th></tr></thead>
+        <tbody><tr><td>Junior</td><td>49</td><td>69</td><td>119</td><td>169</td></tr><tr><td>Associate</td><td>79</td><td>109</td><td>189</td><td>269</td></tr><tr><td>Senior</td><td>99</td><td>149</td><td>259</td><td>359</td></tr><tr><td>Principal</td><td>249</td><td>379</td><td>649</td><td>909</td></tr><tr><td style="color:var(--t3);font-weight:620">Capacity / month</td><td style="color:var(--t3)">~60</td><td style="color:var(--t3)">~130</td><td style="color:var(--t3)">~260</td><td style="color:var(--t3)">~420</td></tr></tbody>
+      </table></div></div>
+    </details>
+    <p class="fine" style="margin-top:17px;max-width:80ch">
+      USD per month on a 5-day week, billed monthly. <b>A 7-day week adds about 25%</b> and raises her capacity
+      by about a third. <b>Yearly billing costs 10 months instead of 12.</b> Five chat messages
+      count as one task. Past her capacity, extra tasks bill at her own rate &mdash; $
+      0.15 for a junior up to $2.20 for a principal, because a
+      principal&rsquo;s work genuinely costs more to do.
+    </p>
+    <div class="card" style="margin-top:20px;border-color:var(--bd2)">
+      <h4>Two things are never limited by her hours</h4>
+      <p class="fine" style="margin-top:9px"><b>She always receives.</b> Messages, files and
+        approvals land the moment they&rsquo;re sent, whatever the hour &mdash; she just works on
+        them during her shift.</p>
+      <p class="fine" style="margin-top:7px"><b>She always chases.</b> Reminders to people outside
+        your company go out on <i>their</i> schedule, not hers. Nobody waits until tomorrow
+        for a nudge.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var SEN={jr:{n:"Junior",base:69,conc:1,over:0.15},as:{n:"Associate",base:109,conc:2,over:0.5},sr:{n:"Senior",base:149,conc:4,over:1.0},pr:{n:"Principal",base:379,conc:8,over:2.2}}, HRS={h4:{n:"4h / day",lab:"part-time",m:0.65,cap:60},h8:{n:"8h / day",lab:"full-time",m:1.0,cap:130},h16:{n:"16h / day",lab:"two shifts",m:1.7,cap:260},h24:{n:"24h / day",lab:"always on",m:2.4,cap:420}}, DAY={d5:{n:"5 days a week",m:1.0,cm:1.0},d7:{n:"7 days a week",m:1.25,cm:1.35}}, YF=0.833333;
+  var sen="sr", hrs="h8", day="d5", cyc="m";
+  function $(i){return document.getElementById(i)}
+  function f(n){return n.toLocaleString('en-US')}
+  function charm(x){return Math.ceil(x/10)*10-1}  // must match charm() in build.py
+  function draw(){
+    var s=SEN[sen], h=HRS[hrs], d=DAY[day];
+    var mo=charm(s.base*h.m*d.m), yr=Math.round(mo*10/12);
+    var shown = cyc==='y' ? yr : mo;
+    $('team-oRole').textContent = s.n;
+    $('team-oPrice').textContent = '$'+f(shown);
+    $('team-oPer').textContent = '/ month';
+    $('team-oDaily').textContent = 'about $'+Math.max(1,Math.round(shown/30))+' a day';
+    $('team-oYear').textContent = cyc==='y'
+      ? 'Billed $'+f(mo*10)+' a year \u2014 you save $'+f(mo*2)
+      : '';
+    $('team-oHrs').textContent = h.n.replace(' / day','')+' a day \u2014 '+h.lab;
+    $('team-oDays').textContent = day==='d5' ? '5 days you choose' : 'All seven days';
+    $('team-oConc').textContent = s.conc===1 ? '1 task' : s.conc+' tasks';
+    $('team-oCap').textContent = '~'+f(Math.round(h.cap*d.cm/5)*5)+' tasks';
+    $('team-oOver').textContent = '$'+s.over.toFixed(2)+' / task';
+    $('team-pbLab').textContent = s.n+' \u00b7 '+h.n.replace(' / day','')+' \u00b7 '+(day==='d5'?'5 days':'7 days');
+    $('team-pbVal').textContent = '$'+f(shown);
+  }
+  function bind(id,set){var w=$(id);w.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    w.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); set(b.dataset.k); draw();});}
+  bind('team-segSen',function(k){sen=k}); bind('team-segHrs',function(k){hrs=k});
+  bind('team-segDay',function(k){day=k}); bind('team-segCyc',function(k){cyc=k});
+  draw();
+})();
+</script>
+
+</div><div class="pmodel" id="panel-crew" role="region" aria-label="A senior and her team pricing"><section id="crew-pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 style="margin-top:12px;max-width:640px">Hire a senior, and she brings her team.</h2>
+    <p class="lede" style="margin-top:16px;max-width:640px">
+      Choose how experienced she is, how many hours a day she works, and which days.
+      From Senior up she arrives with juniors of her own and hands them the routine
+      work. One flat salary, hers and theirs. From $49 a month.
+    </p>
+
+    <div class="formula" style="margin-top:26px">
+      <span>Experience</span><b>&times;</b><span>Hours a day</span><b>&times;</b><span>Days a week</span>
+      <b>=</b><em>her salary, and her team&rsquo;s, flat every month</em>
+    </div>
+    <div class="pick" style="margin-top:32px">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div><div class="fieldlab">Experience</div>
+          <div class="seg" id="crew-segSen" role="group" aria-label="Experience">
+            <button type="button" data-k="jr" aria-pressed="false">Junior<small>works alone</small></button>
+            <button type="button" data-k="as" aria-pressed="false">Associate<small>works alone</small></button>
+            <button type="button" data-k="sr" aria-pressed="true">Senior<small>leads 2 juniors</small></button>
+            <button type="button" data-k="pr" aria-pressed="false">Principal<small>leads a team of 7</small></button>
+          </div></div>
+        <div><div class="fieldlab">Hours per day</div>
+          <div class="seg" id="crew-segHrs" role="group" aria-label="Hours per day">
+            <button type="button" data-k="h4" aria-pressed="false">4h<small>part-time</small></button>
+            <button type="button" data-k="h8" aria-pressed="true">8h<small>full-time</small></button>
+            <button type="button" data-k="h16" aria-pressed="false">16h<small>two shifts</small></button>
+            <button type="button" data-k="h24" aria-pressed="false">24h<small>always on</small></button>
+          </div></div>
+        <div><div class="fieldlab">Days per week</div>
+          <div class="seg" id="crew-segDay" role="group" aria-label="Days per week">
+            <button type="button" data-k="d5" aria-pressed="true">5 days<small>you choose which</small></button>
+            <button type="button" data-k="d7" aria-pressed="false">7 days<small>every day</small></button>
+          </div></div>
+        <div><div class="fieldlab">Billing</div>
+          <div class="seg" id="crew-segCyc" role="group" aria-label="Billing" style="max-width:390px">
+            <button type="button" data-k="m" aria-pressed="true">Monthly</button>
+            <button type="button" data-k="y" aria-pressed="false">Yearly<small>2 months free</small></button>
+          </div></div>
+
+        <div class="crew" id="crew-crewBox">
+          <div class="fieldlab" style="margin-bottom:12px">Who you get for that salary</div>
+          <ul id="crew-crewList"></ul>
+          <p class="fine" id="crew-crewNote" style="margin-top:13px"></p>
+        </div>
+
+        <p class="fine">She works the days and hours you choose &mdash; pick whichever five days suit
+          your week. Anything that arrives outside them is
+          received straight away and picked up when her shift starts &mdash; nothing is lost.</p>
+        <div class="pbar" aria-hidden="true">
+          <span class="pl">Her salary<br><b id="crew-pbLab">Senior &middot; 8h &middot; 5 days</b></span>
+          <span class="pv num" id="crew-pbVal">$149</span>
+        </div>
+      </div>
+
+      <div class="slab out">
+        <div id="crew-oRole" style="font-size:12px;font-weight:760;letter-spacing:.13em;
+          text-transform:uppercase;color:var(--brand-lite)">Senior</div>
+        <div style="display:flex;align-items:baseline;gap:9px;margin-top:13px">
+          <b class="num" id="crew-oPrice" style="font-family:var(--disp);font-weight:700;font-size:3rem;
+            letter-spacing:-.04em;line-height:1;color:#fff">$149</b>
+          <span id="crew-oPer" style="font-size:14.5px;color:var(--on-slab-2)">/ month</span>
+        </div>
+        <div class="num" id="crew-oDaily" style="font-size:14px;color:var(--brand-lite);margin-top:8px;
+          font-weight:620">about $5 a day</div>
+        <div id="crew-oYear" class="num" style="font-size:13px;color:var(--on-slab-2);margin-top:6px"></div>
+        <dl style="margin-top:20px;border-top:1px solid rgba(255,255,255,.14);padding-top:17px;
+          display:flex;flex-direction:column;gap:11px">
+          <div class="sr"><dt>Works</dt><dd id="crew-oHrs">8 hours a day</dd></div>
+          <div class="sr"><dt>Days</dt><dd id="crew-oDays">5 days you choose</dd></div>
+          <div class="sr"><dt>Her team</dt><dd id="crew-oTeam">2 juniors</dd></div>
+          <div class="sr"><dt>Handles at once</dt><dd id="crew-oConc">4 tasks</dd></div>
+          <div class="sr"><dt>Monthly capacity</dt><dd id="crew-oCap">~130 tasks</dd></div>
+          <div class="sr"><dt>Beyond that</dt><dd id="crew-oOver">$1.00 / task</dd></div>
+          <div class="sr"><dt>Teammates</dt><dd>Unlimited</dd></div>
+        </dl>
+        <a class="btn" href="mailto:support@kntara.com?subject=Hire%20a%20virtual%20employee" style="width:100%;justify-content:center;margin-top:22px">Hire this VE &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-elev)">
+  <div class="wrap">
+    <div class="eyebrow">How her team works</div>
+    <h2 style="margin-top:12px;max-width:700px">She decides what is worth her own time,
+      and hands the rest down.</h2>
+    <p class="lede" style="margin-top:15px;max-width:680px">
+      You brief one person. She reads every job that arrives, keeps the parts that need
+      judgement, and passes the routine parts to her juniors &mdash; then checks their work
+      before it reaches you. Exactly what a good senior hire does on their second week.
+    </p>
+    <div class="g3" style="margin-top:32px">
+      <div class="card"><h3>You brief one person</h3>
+        <p class="fine" style="margin-top:8px">Her team is hers to run, not yours to manage.
+          They have no separate rules to write and no separate briefing to give.</p></div>
+      <div class="card"><h3>She routes the work</h3>
+        <p class="fine" style="margin-top:8px">Chasing a signature goes to a junior. Deciding
+          whether the contract is acceptable does not. She makes that call each time.</p></div>
+      <div class="card"><h3>She owns the result</h3>
+        <p class="fine" style="margin-top:8px">Nothing reaches you unreviewed. If a junior gets
+          it wrong, she catches it, and the mistake is still hers to answer for.</p></div>
+    </div>
+    <div class="card" style="margin-top:22px;border-color:var(--bd2)">
+      <h4>Her team makes her faster, not bigger</h4>
+      <p class="fine" style="margin-top:9px">The capacity in her plan is the capacity you get
+        &mdash; her team is how that work gets done, not permission to send more of it. A senior
+        and two juniors still handle <b>about 130 tasks a month</b> on a full-time, five-day
+        week, the same as she would alone. What changes is how fast the routine parts clear,
+        and how little of it needs you.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Every combination</div>
+    <h2 style="margin-top:12px">If you would rather see the whole table</h2>
+    <details class="reveal" style="margin-top:22px">
+      <summary>Every experience level and shift, monthly, on a 5-day week</summary>
+      <div class="scroll-x" style="margin-top:8px"><div class="tw"><table class="mtx num">
+        <thead><tr><th>&nbsp;</th><th>4h / day</th><th>8h / day</th><th>16h / day</th><th>24h / day</th><th>Her team</th></tr></thead>
+        <tbody><tr><td>Junior</td><td>49</td><td>69</td><td>119</td><td>169</td><td style="color:var(--t3)">works alone</td></tr><tr><td>Associate</td><td>79</td><td>109</td><td>189</td><td>269</td><td style="color:var(--t3)">works alone</td></tr><tr><td>Senior</td><td>99</td><td>149</td><td>259</td><td>359</td><td style="color:var(--t3)">+2 juniors</td></tr><tr><td>Principal</td><td>249</td><td>379</td><td>649</td><td>909</td><td style="color:var(--t3)">+2 associates, 5 juniors</td></tr><tr><td style="color:var(--t3);font-weight:620">Capacity / month</td><td style="color:var(--t3)">~60</td><td style="color:var(--t3)">~130</td><td style="color:var(--t3)">~260</td><td style="color:var(--t3)">~420</td><td style="color:var(--t3)">unchanged</td></tr></tbody>
+      </table></div></div>
+    </details>
+    <p class="fine" style="margin-top:17px;max-width:80ch">
+      USD per month on a 5-day week, billed monthly. Her team is included in her salary at no
+      extra charge, and does not change her capacity. <b>A 7-day week adds about 25%</b> and raises
+      capacity by about a third. <b>Yearly billing costs 10 months instead of 12.</b> Five chat
+      messages count as one task. Past capacity, extra tasks bill at her own rate &mdash; $0.15
+      for a junior up to $2.20 for a principal, because a principal&rsquo;s work genuinely costs
+      more to do.
+    </p>
+    <div class="card" style="margin-top:20px;border-color:var(--bd2)">
+      <h4>Two things are never limited by her hours</h4>
+      <p class="fine" style="margin-top:9px"><b>She always receives.</b> Messages, files and
+        approvals land the moment they&rsquo;re sent, whatever the hour &mdash; she just works on
+        them during her shift.</p>
+      <p class="fine" style="margin-top:7px"><b>She always chases.</b> Reminders to people outside
+        your company go out on <i>their</i> schedule, not hers. Nobody waits until tomorrow
+        for a nudge.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var SEN={jr:{n:"Junior",base:69,conc:1,over:0.15},as:{n:"Associate",base:109,conc:2,over:0.5},sr:{n:"Senior",base:149,conc:4,over:1.0},pr:{n:"Principal",base:379,conc:8,over:2.2}}, HRS={h4:{n:"4h / day",lab:"part-time",m:0.65,cap:60},h8:{n:"8h / day",lab:"full-time",m:1.0,cap:130},h16:{n:"16h / day",lab:"two shifts",m:1.7,cap:260},h24:{n:"24h / day",lab:"always on",m:2.4,cap:420}}, DAY={d5:{n:"5 days a week",m:1.0,cm:1.0},d7:{n:"7 days a week",m:1.25,cm:1.35}};
+  // The crew is included in her salary and deliberately does NOT raise capacity.
+  var CREW={jr:[],as:[],sr:[["Junior",2]],pr:[["Associate",2],["Junior",5]]};
+  var sen="sr", hrs="h8", day="d5", cyc="m";
+  function $(i){return document.getElementById(i)}
+  function f(n){return n.toLocaleString('en-US')}
+  function charm(x){return Math.ceil(x/10)*10-1}
+  function initials(s){return s[0].toUpperCase()}
+  function phrase(c){
+    if(!c.length) return 'works alone';
+    return c.map(function(r){return r[1]+' '+r[0].toLowerCase()+(r[1]>1?'s':'')}).join(' and ');
+  }
+  function drawCrew(){
+    var c=CREW[sen], s=SEN[sen], ul=$('crew-crewList');
+    ul.innerHTML='';
+    var li=document.createElement('li');
+    li.innerHTML='<span class="who">'+initials(s.n)+'</span><span class="lead">'+s.n+
+      '</span><span class="fine">the one you brief</span>';
+    ul.appendChild(li);
+    c.forEach(function(r){
+      var x=document.createElement('li');
+      x.innerHTML='<span class="who j">'+r[1]+'&times;</span><span>'+r[0]+
+        (r[1]>1?'s':'')+'</span><span class="fine">she assigns their work</span>';
+      ul.appendChild(x);
+    });
+    var art = 'AEIOU'.indexOf(s.n[0]) >= 0 ? 'An ' : 'A ';
+    $('crew-crewNote').textContent = c.length
+      ? 'All included in her salary. They do not add capacity \u2014 they change how much of it needs you.'
+      : art + s.n.toLowerCase() + ' does her own work. From Senior up she leads juniors of her own.';
+  }
+  function draw(){
+    var s=SEN[sen], h=HRS[hrs], d=DAY[day];
+    var mo=charm(s.base*h.m*d.m), yr=Math.round(mo*10/12);
+    var shown = cyc==='y' ? yr : mo;
+    $('crew-oRole').textContent = s.n;
+    $('crew-oPrice').textContent = '$'+f(shown);
+    $('crew-oPer').textContent = '/ month';
+    $('crew-oDaily').textContent = 'about $'+Math.max(1,Math.round(shown/30))+' a day';
+    $('crew-oYear').textContent = cyc==='y'
+      ? 'Billed $'+f(mo*10)+' a year \u2014 you save $'+f(mo*2)
+      : '';
+    $('crew-oHrs').textContent = h.n.replace(' / day','')+' a day \u2014 '+h.lab;
+    $('crew-oDays').textContent = day==='d5' ? '5 days you choose' : 'All seven days';
+    $('crew-oTeam').textContent = phrase(CREW[sen]);
+    $('crew-oConc').textContent = s.conc===1 ? '1 task' : s.conc+' tasks';
+    $('crew-oCap').textContent = '~'+f(Math.round(h.cap*d.cm/5)*5)+' tasks';
+    $('crew-oOver').textContent = '$'+s.over.toFixed(2)+' / task';
+    $('crew-pbLab').textContent = s.n+' \u00b7 '+h.n.replace(' / day','')+' \u00b7 '+(day==='d5'?'5 days':'7 days');
+    $('crew-pbVal').textContent = '$'+f(shown);
+    drawCrew();
+  }
+  function bind(id,set){var w=$(id);w.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    w.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); set(b.dataset.k); draw();});}
+  bind('crew-segSen',function(k){sen=k}); bind('crew-segHrs',function(k){hrs=k});
+  bind('crew-segDay',function(k){day=k}); bind('crew-segCyc',function(k){cyc=k});
+  draw();
+})();
+</script>
+
+</div><section style="background:var(--bg-elev)">
+  <div class="wrap narrow">
+    <div class="eyebrow">Questions people ask</div>
+    <h2 style="margin-top:12px;margin-bottom:14px">Before you hire her</h2>
+    <details><summary>Is she going to make things up?</summary>
+      <p>She answers from what you&rsquo;ve given her, and she tells you when she doesn&rsquo;t know
+        rather than guessing. When she uses one of your documents she says which one.</p></details>
+    <details><summary>Who can see our information?</summary>
+      <p>Your files and conversations belong to your organisation. People outside it only ever
+        see the specific task you invited them to &mdash; never the thread it came from.</p></details>
+    <details><summary>What if she gets something wrong?</summary>
+      <p>Every task shows what she did and when. You can stop her mid-task, correct her, and
+        she carries on. Anything with real consequences waits for your approval first.</p></details>
+    <details><summary>Can we cancel?</summary>
+      <p>Yes, whenever you like. Nothing is locked in and nothing you&rsquo;ve paid for expires.</p></details>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="g2" style="align-items:center;gap:36px">
+      <div>
+        <h2>Start with one.<br>See what she takes off your desk.</h2>
+        <p style="margin-top:15px;font-size:1.06rem;line-height:1.6">
+          Most people hire a single virtual employee for one recurring headache, then widen
+          her remit once they trust her.
+        </p>
+      </div>
+      <div style="justify-self:start">
+        <a class="btn" href="mailto:support@kntara.com?subject=Hire%20a%20virtual%20employee">Hire your first VE &rarr;</a>
+        <p style="font-size:13px;margin-top:14px">Charged from your Kntara wallet. Cancel any time.<br>
+          Not sure yet? <a href="mailto:support@kntara.com?subject=Kntara%20pricing%20feedback">Tell us what you&rsquo;d pay instead &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer><div class="wrap" style="display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap;align-items:center">
   <span class="lockup" style="gap:9px"><svg class="logo" viewBox="0 0 110 110" role="img" aria-label="Kntara"><circle cx="38" cy="65" r="7" fill="currentColor"/><circle cx="72" cy="65" r="7" fill="currentColor"/><path d="M28 38 Q38 28 55 22 Q72 28 82 38" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg><span class="wm" style="font-size:13px">KNTARA</span></span>
   <span style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
@@ -267,5 +1141,91 @@ details.reveal[open]{padding-bottom:8px}
   </span>
   <span>All prices in US dollars, excluding tax. &nbsp;support@kntara.com</span>
 </div></footer>
+
+
+</html>
+<style>.pbtn{cursor:pointer;font-family:var(--body);font-size:13px;font-weight:640;
+  background:rgba(255,255,255,.09);color:var(--on-slab);border:1px solid rgba(255,255,255,.17);
+  border-radius:9px;padding:9px 13px}.pbtn:hover{background:rgba(255,255,255,.17)}
+  .sr{display:flex;justify-content:space-between;gap:14px;font-size:14.2px;align-items:baseline}
+  .sr dt{color:var(--on-slab-2)} .sr dd{margin:0;font-weight:660;text-align:right}
+  .out{position:sticky;top:86px}.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  @media(max-width:900px){.tiers{grid-template-columns:1fr}}
+  .tier{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--bd);
+    border-radius:18px;padding:26px;box-shadow:var(--sh)}
+  .tier.hero{background:var(--slab);border-color:var(--slab-bd);color:var(--on-slab);box-shadow:var(--sh-lg)}
+  .tier.hero .tname{color:var(--brand-lite)} .tier.hero .amt{color:#fff}
+  .tier.hero .tsub,.tier.hero .per{color:var(--on-slab-2)}
+  .tname{font-size:12px;font-weight:760;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep)}
+  .tprice{display:flex;align-items:baseline;gap:8px;margin-top:15px;flex-wrap:wrap}
+  .amt{font-family:var(--disp);font-weight:700;font-size:clamp(2rem,3vw,2.6rem);
+    letter-spacing:-.035em;line-height:1;white-space:nowrap}
+  .per{font-size:14px;color:var(--t2)}
+  .tsub{font-size:14px;color:var(--t2);margin-top:10px;line-height:1.5;min-height:44px}
+  .tier .rowlist{margin-top:20px;flex:1}
+  .tbadge{display:inline-block;font-size:10.5px;font-weight:760;letter-spacing:.13em;
+    text-transform:uppercase;background:var(--brand);color:var(--on-brand);padding:5px 11px;
+    border-radius:999px;margin-bottom:13px}
+  .tspace{display:block;height:32px}.pick{display:grid;grid-template-columns:1fr .8fr;gap:26px;align-items:start}
+  @media(max-width:980px){.pick{grid-template-columns:1fr}}
+  .out{position:sticky;top:86px}
+  .sr{display:flex;justify-content:space-between;gap:14px;font-size:14.2px;align-items:baseline}
+  .sr dt{color:var(--on-slab-2)} .sr dd{margin:0;font-weight:660;text-align:right}
+  .mtx td:first-child{font-weight:640;white-space:nowrap}
+  .mtx td:not(:first-child),.mtx th:not(:first-child){text-align:right}
+  .mtx tbody tr:hover{background:var(--bg-elev)}.pick{display:grid;grid-template-columns:1fr .8fr;gap:26px;align-items:start}
+  @media(max-width:980px){.pick{grid-template-columns:1fr}}
+  .out{position:sticky;top:86px}
+  .sr{display:flex;justify-content:space-between;gap:14px;font-size:14.2px;align-items:baseline}
+  .sr dt{color:var(--on-slab-2)} .sr dd{margin:0;font-weight:660;text-align:right}
+  .mtx td:first-child{font-weight:640;white-space:nowrap}
+  .mtx td:not(:first-child),.mtx th:not(:first-child){text-align:right}
+  .mtx tbody tr:hover{background:var(--bg-elev)}
+  .crew{background:var(--bg-elev);border:1px solid var(--bd);border-radius:14px;padding:19px}
+  .crew ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+  .crew li{display:flex;align-items:center;gap:11px;font-size:14.4px}
+  .crew .who{width:30px;height:30px;flex:0 0 auto;border-radius:50%;display:grid;
+    place-items:center;font-size:10.5px;font-weight:760;letter-spacing:.02em;
+    background:var(--brand);color:var(--on-brand)}
+  .crew .who.j{background:var(--bd2);color:var(--t1)}
+  .crew .lead{font-weight:660}
+.pmodel[hidden]{display:none}
+.mseg button{flex:1 1 190px}
+.cmprow{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline;
+  padding:15px 17px;background:var(--bg-elev);border:1px solid var(--bd);border-radius:13px}
+.cmphead{flex:1 1 100%;margin-bottom:2px}
+.cmp{display:inline-flex;align-items:baseline;gap:7px;font-size:13.6px;opacity:.55;
+  transition:opacity .14s}
+.cmp[data-on]{opacity:1}
+.cmp b{font-weight:660}
+.cmp .num{font-family:var(--disp);font-weight:700}
+</style>
+<script>
+(function(){
+  var seg=document.getElementById('segModel'); if(!seg) return;
+  var keys=[].slice.call(seg.querySelectorAll('button')).map(function(b){return b.dataset.m});
+  var KEY='kntara-pricing-model', pick=null;
+  try{ pick=sessionStorage.getItem(KEY); }catch(e){}
+  if(keys.indexOf(pick)<0){
+    pick=keys[Math.floor(Math.random()*keys.length)];
+    try{ sessionStorage.setItem(KEY,pick); }catch(e){}
+  }
+  function show(m){
+    keys.forEach(function(k){
+      var panel=document.getElementById('panel-'+k);
+      if(panel) panel.hidden = (k!==m);
+      var btn=seg.querySelector('button[data-m="'+k+'"]');
+      if(btn) btn.setAttribute('aria-pressed', String(k===m));
+      var cmp=document.querySelector('.cmp[data-m="'+k+'"]');
+      if(cmp){ if(k===m) cmp.setAttribute('data-on',''); else cmp.removeAttribute('data-on'); }
+    });
+    try{ sessionStorage.setItem(KEY,m); }catch(e){}
+  }
+  seg.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(b) show(b.dataset.m);
+  });
+  show(pick);
+})();
+</script>
 </body>
 </html>
