@@ -117,9 +117,9 @@ nav .links a{white-space:nowrap}
 .tick::after{content:"";position:absolute;left:5px;top:5px;width:6px;height:3px;
   border-left:2px solid var(--on-brand);border-bottom:2px solid var(--on-brand);transform:rotate(-45deg)}
 .rowlist b{font-weight:660}
-.hero{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:clamp(28px,5vw,64px);
+.split{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:clamp(28px,5vw,64px);
   align-items:center}
-@media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:32px}
   .shot{justify-self:center}}
 .cap{margin-top:11px;font-size:12.5px;color:var(--t3);text-align:center;max-width:285px}
 .shot img{display:block;width:285px;height:auto;border-radius:30px;
@@ -211,7 +211,7 @@ details.reveal[open]{padding-bottom:8px}
 </div></nav>
 
 <section id="top">
-  <div class="wrap hero">
+  <div class="wrap split">
     <div>
       <div class="eyebrow">Kntara Virtual Employees</div>
       <h1 style="margin-top:14px">Hire someone who<br>actually does the work.</h1>
@@ -320,7 +320,7 @@ details.reveal[open]{padding-bottom:8px}
 
 <section id="examples">
   <div class="wrap">
-    <div class="hero" style="align-items:start">
+    <div class="split" style="align-items:start">
       <div>
         <div class="eyebrow">Who you could hire</div>
         <h2 style="margin-top:12px">She is whoever the job needs her to be.</h2>
@@ -464,7 +464,7 @@ details.reveal[open]{padding-bottom:8px}
 
 <section id="how">
   <div class="wrap">
-    <div class="hero" style="align-items:start">
+    <div class="split" style="align-items:start">
       <div>
         <div class="eyebrow">How it works</div>
         <h2 style="margin-top:12px">Three steps, then she&rsquo;s working.</h2>
@@ -502,19 +502,14 @@ details.reveal[open]{padding-bottom:8px}
     <div class="slab" style="text-align:center;padding:24px 26px">
       <h3 style="color:#fff">We haven&rsquo;t settled how to price her yet.</h3>
       <p style="margin-top:9px;font-size:14.8px">
-        Four ways of paying for the same employee. One is picked for you at random
-        to start &mdash; switch between them, then tell us which one you would
-        actually buy, and what felt wrong about the others.
+        Four ways of paying for the same employee &mdash; same product, same
+        person. One is picked for you at random to start. Switch between them,
+        then tell us which one you would actually buy, and what felt wrong about
+        the others.
       </p>
     </div>
     <div class="fieldlab" style="margin-top:28px">Choose a pricing model</div>
     <div class="seg mseg" id="segModel" role="group" aria-label="Pricing model"><button type="button" data-m="hours" aria-pressed="false">By the hour<small>Pay for hours she works</small></button><button type="button" data-m="simple" aria-pressed="false">One flat plan<small>One price, everything in</small></button><button type="button" data-m="team" aria-pressed="false">Like a real hire<small>Experience, hours, days</small></button><button type="button" data-m="crew" aria-pressed="false">A senior and her team<small>She delegates the routine</small></button></div>
-    <div class="cmprow">
-      <span class="fine cmphead">The same job on each, so the numbers compare:
-        a full-time senior, five days a week. The flat plan has no experience
-        levels, so its closest equivalent is the tier sized for all-day use.</span>
-      <span class="cmp" data-m="hours"><b>By the hour</b><span class="num">about $204</span><span class="fine">110 worked hours at $1.85</span></span><span class="cmp" data-m="simple"><b>One flat plan</b><span class="num">$149</span><span class="fine">Team plan, sized for all-day use</span></span><span class="cmp" data-m="team"><b>Like a real hire</b><span class="num">$149</span><span class="fine">Senior, 8h, 5 days</span></span><span class="cmp" data-m="crew"><b>A senior and her team</b><span class="num">$149</span><span class="fine">Senior, 8h, 5 days, plus 2 juniors</span></span>
-    </div>
   </div>
 </section>
 <div class="pmodel" id="panel-hours" role="region" aria-label="By the hour pricing"><section id="hours-pricing">
@@ -1190,15 +1185,9 @@ details.reveal[open]{padding-bottom:8px}
   .crew .who.j{background:var(--bd2);color:var(--t1)}
   .crew .lead{font-weight:660}
 .pmodel[hidden]{display:none}
+#models{padding-top:clamp(30px,4vw,46px);padding-bottom:0}
+.pmodel>section:first-of-type{padding-top:clamp(22px,3vw,32px)}
 .mseg button{flex:1 1 190px}
-.cmprow{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline;
-  padding:15px 17px;background:var(--bg-elev);border:1px solid var(--bd);border-radius:13px}
-.cmphead{flex:1 1 100%;margin-bottom:2px}
-.cmp{display:inline-flex;align-items:baseline;gap:7px;font-size:13.6px;opacity:.55;
-  transition:opacity .14s}
-.cmp[data-on]{opacity:1}
-.cmp b{font-weight:660}
-.cmp .num{font-family:var(--disp);font-weight:700}
 </style>
 <script>
 (function(){
@@ -1216,8 +1205,6 @@ details.reveal[open]{padding-bottom:8px}
       if(panel) panel.hidden = (k!==m);
       var btn=seg.querySelector('button[data-m="'+k+'"]');
       if(btn) btn.setAttribute('aria-pressed', String(k===m));
-      var cmp=document.querySelector('.cmp[data-m="'+k+'"]');
-      if(cmp){ if(k===m) cmp.setAttribute('data-on',''); else cmp.removeAttribute('data-on'); }
     });
     try{ sessionStorage.setItem(KEY,m); }catch(e){}
   }
