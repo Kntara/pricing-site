@@ -101,6 +101,12 @@ nav .links a:hover{color:var(--t1)}
 .tick::after{content:"";position:absolute;left:5px;top:5px;width:6px;height:3px;
   border-left:2px solid var(--on-brand);border-bottom:2px solid var(--on-brand);transform:rotate(-45deg)}
 .rowlist b{font-weight:660}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:clamp(28px,5vw,64px);
+  align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr}
+  .hero .shot{display:none}}
+.shot img{display:block;width:285px;height:auto;border-radius:30px;
+  border:1px solid var(--bd2);box-shadow:var(--sh-lg)}
 .choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:820px){.choices{grid-template-columns:1fr}}
 .choice{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--bd);
@@ -152,15 +158,24 @@ footer{border-top:1px solid var(--bd);padding:36px 0 56px;color:var(--t3);font-s
 </head>
 <body>
 <section style="padding-top:clamp(44px,8vw,80px)">
-  <div class="wrap narrow" style="text-align:center">
-    <span class="lockup" style="justify-content:center"><svg class="logo" viewBox="0 0 110 110" role="img" aria-label="Kntara"><circle cx="38" cy="65" r="7" fill="currentColor"/><circle cx="72" cy="65" r="7" fill="currentColor"/><path d="M28 38 Q38 28 55 22 Q72 28 82 38" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg>
-      <span class="stack"><span class="wm">KNTARA</span>
-      <span class="tl">Virtual employees</span></span></span>
-    <h1 style="margin-top:30px">Hire someone who owns the work.</h1>
-    <p class="lede" style="margin-top:18px">
-      A Kntara virtual employee isn&rsquo;t a chatbot you ask questions. She takes work off
-      your desk, chases the people it depends on, and comes back when it&rsquo;s done.
-    </p>
+  <div class="wrap hero" style="max-width:960px">
+    <div>
+      <span class="lockup"><svg class="logo" viewBox="0 0 110 110" role="img" aria-label="Kntara"><circle cx="38" cy="65" r="7" fill="currentColor"/><circle cx="72" cy="65" r="7" fill="currentColor"/><path d="M28 38 Q38 28 55 22 Q72 28 82 38" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg>
+        <span class="stack"><span class="wm">KNTARA</span>
+        <span class="tl">Virtual employees</span></span></span>
+      <h1 style="margin-top:26px">Hire someone who owns the work.</h1>
+      <p class="lede" style="margin-top:18px">
+        A Kntara virtual employee isn&rsquo;t a chatbot you ask questions. She takes work off
+        your desk, chases the people it depends on, and comes back when it&rsquo;s done.
+      </p>
+    </div>
+    <div class="shot">
+      <picture>
+        <source srcset="img/app-team-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="img/app-team-light.png" width="285" height="620" decoding="async"
+             alt="The Kntara app showing a team of virtual employees, each marked available.">
+      </picture>
+    </div>
   </div>
   <div class="wrap" style="max-width:960px;margin-top:44px">
     <div class="slab" style="text-align:center;padding:24px 26px">

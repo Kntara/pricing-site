@@ -101,6 +101,12 @@ nav .links a:hover{color:var(--t1)}
 .tick::after{content:"";position:absolute;left:5px;top:5px;width:6px;height:3px;
   border-left:2px solid var(--on-brand);border-bottom:2px solid var(--on-brand);transform:rotate(-45deg)}
 .rowlist b{font-weight:660}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:clamp(28px,5vw,64px);
+  align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr}
+  .hero .shot{display:none}}
+.shot img{display:block;width:285px;height:auto;border-radius:30px;
+  border:1px solid var(--bd2);box-shadow:var(--sh-lg)}
 .choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:820px){.choices{grid-template-columns:1fr}}
 .choice{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--bd);
@@ -165,8 +171,8 @@ footer{border-top:1px solid var(--bd);padding:36px 0 56px;color:var(--t3);font-s
 </div></nav>
 
 <section id="top">
-  <div class="wrap">
-    <div style="max-width:720px">
+  <div class="wrap hero">
+    <div>
       <div class="eyebrow">Kntara Virtual Employees</div>
       <h1 style="margin-top:14px">Hire someone who<br>actually does the work.</h1>
       <p class="lede" style="margin-top:20px">
@@ -178,6 +184,13 @@ footer{border-top:1px solid var(--bd);padding:36px 0 56px;color:var(--t3);font-s
         <a class="btn" href="#pricing">See pricing &rarr;</a>
         <a class="btn ghost" href="#what">What she can do</a>
       </div>
+    </div>
+    <div class="shot">
+      <picture>
+        <source srcset="../img/app-team-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="../img/app-team-light.png" width="285" height="620" decoding="async"
+             alt="The Kntara app showing a team of virtual employees, each marked available.">
+      </picture>
     </div>
   </div>
 </section>
