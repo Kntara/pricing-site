@@ -1,0 +1,11 @@
+---
+
+# Weekly version updates. Security updates and alerts are on for every repo
+# through the kaitech enterprise policy.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
